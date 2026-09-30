@@ -1,0 +1,148 @@
+/* CleanPulse Smart Waste Management System Styles */
+
+:root {
+  --primary: #059669;
+  --primary-hover: #047857;
+  --accent-gold: #f59e0b;
+  --accent-silver: #94a3b8;
+  --accent-bronze: #b45309;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: #f8fafc;
+  color: #1e293b;
+}
+
+/* Glassmorphism elements */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.glass-nav {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* Badges styling */
+.badge-gold {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 50%, #f59e0b 100%);
+  border: 1px solid #d97706;
+  color: #78350f;
+  box-shadow: 0 4px 14px 0 rgba(245, 158, 11, 0.3);
+}
+
+.badge-silver {
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 50%, #94a3b8 100%);
+  border: 1px solid #64748b;
+  color: #1e293b;
+  box-shadow: 0 4px 14px 0 rgba(148, 163, 184, 0.3);
+}
+
+.badge-bronze {
+  background: linear-gradient(135deg, #ffedd5 0%, #fed7aa 50%, #c2410c 100%);
+  border: 1px solid #9a3412;
+  color: #7c2d12;
+  box-shadow: 0 4px 14px 0 rgba(194, 65, 12, 0.3);
+}
+
+/* Waste Area Alert Category Colors */
+.alert-btn-red {
+  background-color: #fee2e2;
+  color: #b91c1c;
+  border: 2px solid #ef4444;
+}
+.alert-btn-red.active, .alert-btn-red:hover {
+  background-color: #ef4444;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.35);
+}
+
+.alert-btn-orange {
+  background-color: #ffedd5;
+  color: #c2410c;
+  border: 2px solid #f97316;
+}
+.alert-btn-orange.active, .alert-btn-orange:hover {
+  background-color: #f97316;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.35);
+}
+
+.alert-btn-yellow {
+  background-color: #fef9c3;
+  color: #854d0e;
+  border: 2px solid #eab308;
+}
+.alert-btn-yellow.active, .alert-btn-yellow:hover {
+  background-color: #eab308;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(234, 179, 8, 0.35);
+}
+
+.alert-btn-green {
+  background-color: #dcfce7;
+  color: #15803d;
+  border: 2px solid #22c55e;
+}
+.alert-btn-green.active, .alert-btn-green:hover {
+  background-color: #22c55e;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.35);
+}
+
+/* Animated Pulse Indicators */
+.pulse-dot-red {
+  box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+  animation: pulse-red 2s infinite;
+}
+@keyframes pulse-red {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(239, 68, 68, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+}
+
+.pulse-dot-green {
+  box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+  animation: pulse-green 2s infinite;
+}
+@keyframes pulse-green {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(34, 197, 94, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+}
+
+/* Progress bar transitions */
+.smooth-progress {
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Shimmer effect on rewards */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.coin-shine {
+  background: linear-gradient(90deg, #f59e0b 0%, #fef08a 50%, #f59e0b 100%);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite linear;
+}
